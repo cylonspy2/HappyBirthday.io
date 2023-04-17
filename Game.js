@@ -1,10 +1,10 @@
 window.onload = function() {
 
     var config = {
-        width: 800, //window.innerWidth,
-        height: 600, //window.innerHeight,
+        width: window.innerWidth,
+        height: window.innerHeight,
         backgroundColor: 0x191970,
-        scene: [scene1]
+        scene: [scene1, scene2]
     }
 
     var game = new Phaser.Game(config);
