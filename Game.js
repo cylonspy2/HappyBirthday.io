@@ -14,6 +14,9 @@ var config = {
         preload: preload,
         create: create,
         update: update
+    },
+    render: {
+        pixelArt: true
     }
 };
 
@@ -63,15 +66,15 @@ function create ()
     wellWishes.setScale(0.1);
     wellWishes.visible = false;
 
-    const grandeure = player.anims.create({
+    const grandeure = this.anims.create({
         key: 'fill', // Animation key/name
-        frames: this.anims.generateFrameNumbers('envelope', { frames: [0,1,2,3,4,5,6,7,8] }), // Frames to use for the animation
+        frames: this.anims.generateFrameNumbers('envelope', { frames: [0,1,2,3,4,5,6,7] }), // Frames to use for the animation
         frameRate: 9, // Frames per second for the animation
       });
-    const boooom = player.anims.create({
+    const boooom = this.anims.create({
         key: 'boom', // Animation key/name
-        frames: this.anims.generateFrameNumbers('envelope', { frames: [9,10] }), // Frames to use for the animation
-        frameRate: 10, // Frames per second for the animation
+        frames: this.anims.generateFrameNumbers('envelope', { frames: [8,9] }), // Frames to use for the animation
+        frameRate: 20, // Frames per second for the animation
       });
 
 
@@ -157,12 +160,12 @@ function update ()
 
 if(this.clicked && !this.clickedActive)
 {
-    player.play('fill', true);
+    grandeure.play('fill', true);
     this.clickedActive = true;
 }
 if(this.opened && !this.openedActive)
 {
-    player.play('boom', true);
+    boooom.play('boom', true);
     this.openedActive = true;
 }
 }
