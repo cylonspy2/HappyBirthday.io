@@ -24,7 +24,7 @@ var game = new Phaser.Game(config);
 
 function preload ()
 {
-    this.load.spritesheet("envelope", 'assets/envelope.png', {
+    this.load.spritesheet("envelope", 'Assets/envelope.png', {
         frameWidth: 72, // Width of each frame in pixels
         frameHeight: 50, // Height of each frame in pixels
       });
