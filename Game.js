@@ -47,6 +47,8 @@ function create ()
     var opened = false;
     var openedActive = false;
 
+    this.add.text(0,0, "(Click the Letter! It's for you!)", { color: '#00ff00' }).setOrigin(0, 0.5);
+
     player = this.physics.add.sprite(config.width/2,config.height/2,"envelope");
     player.setBounce(1);
     player.body.setGravityY(-300)
@@ -150,7 +152,6 @@ function create ()
                 wellWishing.play();
             }
     });
-
 }
 
 function update ()
