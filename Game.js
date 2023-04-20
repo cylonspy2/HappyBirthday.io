@@ -66,12 +66,12 @@ function create ()
     wellWishes.setScale(0.1);
     wellWishes.visible = false;
 
-    const grandeure = this.anims.create({
+    const grandeure = player.anims.create({
         key: 'fill', // Animation key/name
         frames: this.anims.generateFrameNumbers('envelope', { frames: [0,1,2,3,4,5,6,7] }), // Frames to use for the animation
         frameRate: 9, // Frames per second for the animation
       });
-    const boooom = this.anims.create({
+    const boooom = player.anims.create({
         key: 'boom', // Animation key/name
         frames: this.anims.generateFrameNumbers('envelope', { frames: [8,9] }), // Frames to use for the animation
         frameRate: 20, // Frames per second for the animation
@@ -160,12 +160,12 @@ function update ()
 
 if(this.clicked && !this.clickedActive)
 {
-    grandeure.play('fill', true);
+    player.play('fill', true);
     this.clickedActive = true;
 }
 if(this.opened && !this.openedActive)
 {
-    boooom.play('boom', true);
+    player.play('boom', true);
     this.openedActive = true;
 }
 }
