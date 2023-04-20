@@ -60,6 +60,7 @@ function create ()
     emitter.setActive(false);
 
     wellWishes = this.add.sprite(centerWidth, centerHeight, "wellWishes");
+    wellWishes.setScale(0.1);
     wellWishes.visible = false;
 
     const grandeure = player.anims.create({
